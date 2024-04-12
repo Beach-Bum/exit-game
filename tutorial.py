@@ -6,7 +6,7 @@ from langchain import LLMChain, PromptTemplate
 import json
 
 cloud_config= {
-  'secure_connect_bundle': 'secure-connect-choose-your-own-adventure.zip'
+  'secure_connect_bundle': 'secure-connect-exit-game.zip'
 }
 
 with open("choose_your_own_adventure-token.json") as f:
