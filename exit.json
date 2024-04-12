@@ -1,9 +1,5 @@
-from astrapy import DataAPIClient
-
-# Initialize the client
-client = DataAPIClient("YOUR_TOKEN")
-db = client.get_database_by_api_endpoint(
-  "https://6e684c5b-0947-48b5-b417-25d236fb56d1-us-east-2.apps.astra.datastax.com"
-)
-
-print(f"Connected to Astra DB: {db.list_collection_names()}")
+{
+  "clientId": "WYKSZaHfTYxiFGnOOYyAlMRk",
+  "secret": "H2W.aQu-LG_rZ0NEn8xjy1zM1vNc,37QfKoaXLi2n0MDt+1o5c_0Pbn4alvj4LgYRPwJBfda5D-AZsg+I.cmxBtEcuQIQygNnpfYAX+XC7+l+iPhEfPkYkI0cWIExP4K",
+  "token": "AstraCS:WYKSZaHfTYxiFGnOOYyAlMRk:32c6693bfcd8efea97056581947e0e98237929e4e71b04018692550be78c6781"
+}
