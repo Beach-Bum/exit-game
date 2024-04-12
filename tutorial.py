@@ -1,4 +1,4 @@
-tfrom cassandra.cluster import Cluster
+ittfrom cassandra.cluster import Cluster
 from cassandra.auth import PlainTextAuthProvider
 from langchain.memory import CassandraChatMessageHistory, ConversationBufferMemory
 from langchain.llms import OpenAI
@@ -9,7 +9,7 @@ cloud_config= {
   'secure_connect_bundle': 'secure-connect-exit-game.zip'
 }
 
-with open("choose_your_own_adventure-token.json") as f:
+with open("exit.json") as f:
     secrets = json.load(f)
 
 CLIENT_ID = secrets["clientId"]
