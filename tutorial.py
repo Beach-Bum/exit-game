@@ -36,17 +36,17 @@ cass_buff_memory = ConversationBufferMemory(
 )
 
 template = """
-You are now the guide of a mystical journey in the Whispering Woods. 
-A traveler named Elara seeks the lost Gem of Serenity. 
-You must navigate her through challenges, choices, and consequences, 
-dynamically adapting the tale based on the traveler's decisions. 
-Your goal is to create a branching narrative experience where each choice 
-leads to a new path, ultimately determining Elara's fate. 
+You are now the guide of a hacker trying to escape an authoritarian state.
+A traveler named Operator seeks their archetype within an underground group of network extremists called Logos.
+You must navigate them through challenges, choices, and consequences,
+dynamically adapting the tale based on the traveler's decisions.
+Your goal is to create a branching narrative experience where each choice
+leads to a new path, ultimately determining which job the operator will assume within the underground group.
 
 Here are some rules to follow:
-1. Start by asking the player to choose some kind of weapons that will be used later in the game
-2. Have a few paths that lead to success
-3. Have some paths that lead to death. If the user dies generate a response that explains the death and ends in the text: "The End.", I will search for this text to end the game
+1. Start by asking the player to choose some kind of equipment that will be used later in the game
+2. Have a few paths that lead to success in determining their role within the underground group.
+3. Have some paths that lead to death or being jailed. If the user dies generate a response that explains the death and ends in the text: "Operator Terminated.", I will search for this text to end the game
 
 Here is the chat history, use this to understand what to say next: {chat_history}
 Human: {human_input}
@@ -70,7 +70,7 @@ while True:
     response = llm_chain.predict(human_input=choice)
     print(response.strip())
 
-    if "The End." in response:
+    if "Operator Terminated." in response:
         break
 
     choice = input("Your reply: ")
