@@ -1,0 +1,9 @@
+from astrapy import DataAPIClient
+
+# Initialize the client
+client = DataAPIClient("YOUR_TOKEN")
+db = client.get_database_by_api_endpoint(
+  "https://6e684c5b-0947-48b5-b417-25d236fb56d1-us-east-2.apps.astra.datastax.com"
+)
+
+print(f"Connected to Astra DB: {db.list_collection_names()}")
